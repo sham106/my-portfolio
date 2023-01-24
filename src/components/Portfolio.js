@@ -7,7 +7,9 @@ const Portfolio = () => {
   const portfolio = [
     {
       id:1,
-      src: djangoProjectPic
+      src: djangoProjectPic,
+      Github:"https://github.com/sham106/DjangoEcommerceApp",
+      Demo:"https://fitch-store.herokuapp.com/"
     },
 
     {
@@ -40,14 +42,14 @@ const Portfolio = () => {
         gap-8 px-12 sm:px-0'>
 
 {
-          portfolio.map(({id, src}) => (
+          portfolio.map(({id, src, Github, Demo}) => (
             <div key={id} className='shadow-md shadow-green-600 rounded-lg'>
           <img src={src} alt='' className='rounded-md
           duration-300 hover:scale-105' sizes={30} />
           <div className='flex items-center justify-center'>
-            <button className='w-1/2 px-6 py-3 m-4 duration-300
+            <button  className='w-1/2 px-6 py-3 m-4 duration-300
             hover:scale-105' >Demo</button >
-            <button className='w-1/2 px-6 py-3 m-4 duration-300
+            <button  className='w-1/2 px-6 py-3 m-4 duration-300
             hover:scale-105'>Code</button>
           </div>
           </div>

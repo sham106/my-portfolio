@@ -1,7 +1,19 @@
 import React from 'react'
 import profilePic from '../assets/portfolio/profilePic.jpg'
 import {MdOutlineArrowRight} from 'react-icons/md'
+import {Link} from "react-scroll"
+
 const Home = () => {
+
+  const handleClickScroll = () => {
+    const element = document.getElementsByName('portfolio');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div name='home' className='h-screen w-full bg-gradient-to-b from-white to-red-10'>
       <div className='max-w-screen-lg mx-auto flex flex-col
@@ -18,12 +30,15 @@ const Home = () => {
             Mysql, JS
           </p>
           <div>
-            <button className='group w-fit px-6 py-3 my-2
+            <Link 
+            to='portfolio'
+            smooth
+            className='group w-fit px-6 py-3 my-2
             flex items-center rounded-md bg-gradient-to-r from-blue-600
-            to-cyan-500'>
+            to-cyan-500 cursor-pointer'>
               Portfolio<span className='group-hover:rotate-90 duration-300  '><MdOutlineArrowRight size={30}/></span>
               
-            </button>
+            </Link>
           </div>
         </div>
         <div>
